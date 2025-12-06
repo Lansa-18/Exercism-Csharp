@@ -48,15 +48,10 @@ public static class Languages
 
     public static bool IsUnique(List<string> languages)
     {
-        for (int i = 0; i < languages.Count; i++)
-        {
-            for (int j = i + 1; j < languages.Count; j++)
-            {
-                if (languages[i] == languages[j])
-                {
-                    return false;
-                }
-            }
+        HashSet<string> uniqueLanguages = new HashSet<string>(languages);
+
+        if (languages.Count != uniqueLanguages.Count) {
+            return false;
         }
 
         return true;
