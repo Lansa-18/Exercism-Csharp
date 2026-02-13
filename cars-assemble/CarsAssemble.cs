@@ -14,15 +14,13 @@ static class AssemblyLine
         else result = 0;
 
         return result;
-        throw new NotImplementedException("Please implement the (static) AssemblyLine.SuccessRate() method");
     }
-    
+
     public static double ProductionRatePerHour(int speed)
     {
         double rate = SuccessRate(speed);
         int producePerHour = speed * 221;
         return producePerHour * rate;
-        throw new NotImplementedException("Please implement the (static) AssemblyLine.ProductionRatePerHour() method");
     }
 
     public static int WorkingItemsPerMinute(int speed)
@@ -35,8 +33,7 @@ static class AssemblyLine
 
         double producePerMin = speed * 3.68;
         double rate = SuccessRate(speed);
-        return (int) (producePerMin * rate);
+        return (int)(producePerMin * rate);
 
-        throw new NotImplementedException("Please implement the (static) AssemblyLine.WorkingItemsPerMinute() method");
     }
 }
