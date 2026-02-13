@@ -11,6 +11,6 @@ public static class ReverseString
             counter++;
         }
 
-        return new string(string.Join(string.Empty, charArr));
+        return new string(charArr);
     }
 }
